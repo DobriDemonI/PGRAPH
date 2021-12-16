@@ -1,0 +1,13 @@
+#version 330 core
+
+layout (location = 2) in vec2 aPossa;
+layout (location = 3) in vec3 aColor_circle;
+
+out vec3 outColor1;
+uniform mat4 projection;
+
+void main() 
+{
+	gl_Position = vec4(aPossa, 0.0, 1.0);
+	outColor1 = aColor_circle;
+}
